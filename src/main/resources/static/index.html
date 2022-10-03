@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>    
+    <title>FrontEnd Partyroom</title>
+</head>
+
+<body>
+    <h1>Alquiler de Salones</h1>
+
+    <div>
+        <h1>Categorias</h1>
+        
+        <input type="text" id="nombreCategoria" placeholder="Name Category">
+        <input type="text" id="descripcionCategoria" placeholder="Description Category">
+        
+        <button onclick="traerInformacionCategoria">Consultar</button>
+        <button onclick="guardarInformacionCategoria">Insertar</button>
+        <button onclick="modificarInformacionCategoria">Modificar</button>
+        <button onabort="borrarInformacionCategoria">Borrar</button> 
+
+    </div>
+
+    
+    <div>
+        <h1>Partyroom</h1>
+
+        <input type="text"   id="nombrePartyroom" placeholder="Name Partyroom">
+        <input type="text"   id="dueñoPartyroom" placeholder="Owner Partyroom">
+        <input type="number" id="capacidadPartyroom" placeholder="Capacity Partyroom">
+        <input type="text"   id="descripcionPartyroom" placeholder="Description Partyroom">
+        <input type="number" id="idCategoria" placeholder="Id Category">
+        
+
+        <button onclick="traerInformacionPartyroom">Consultar</button>
+        <button onclick="guardarInformacionPartyroom">Insertar</button>
+        <button onclick="modificarInformacionPartyroom">Modificar</button>
+        <button onabort="borrarInformacionPartyroom">Borrar</button> 
+
+    </div>
+
+    
+    
+    <div>
+        <h1>Cliente</h1>
+
+        <input type="text"   id="nombreCliente" placeholder="Name Client">
+        <input type="email"   id="emailCliente" placeholder="emailClient">
+        <input type="password"   id="claveCliente" placeholder="PasswordClient">
+        <input type="number" id="edadCliente" placeholder="AgeCliente">
+
+
+        <button onclick="traerInformacionClientes">Consultar</button>
+        <button onclick="guardarInformacionClientes">Insertar</button>
+        <button onclick="modificarInformacionClientes">Modificar</button>
+        <button onabort="borrarInformacionClientes">Borrar</button> 
+
+    </div>
+
+    
+    <div>
+        <h1>Mensajes</h1>
+
+        <input type="text" id="mensageCliente" placeholder="MessageClient">
+        <input type="number" id="idClienteM" placeholder="Codigo Cliente">
+        <input type="number" id="idPartyroomM" placeholder="Codigo Partyroom">
+
+        <button onclick="traerInformacionMensajes">Consultar</button>
+        <button onclick="guardarInformacionMensajes">Insertar</button>
+        <button onclick="modificarInformacionMensajes">Modificar</button>
+        <button onabort="borrarInformacionMensajes">Borrar</button> 
+
+    </div>
+
+    
+    
+    <div>
+        <h1>Reservaciones</h1>
+
+        <input type="date" id="fechaInicio" placeholder="StartDate">
+        <input type="date" id="fechaFinal" placeholder="DevolutionDate">
+        <input type="number" id="idClienteR" placeholder="Codigo Cliente">
+        <input type="number" id="idPartyroomR" placeholder="Codigo Partyroom">
+
+        <button onclick="traerInformacionReservaciones">Consultar</button>
+        <button onclick="guardarInformacionReservaciones">Insertar</button>
+        <button onclick="modificarInformacionReservaciones">Modificar</button>
+        <button onabort="borrarInformacionReservaciones">Borrar</button> 
+
+    </div>
+
+    <div>
+        <h1>Administracion</h1>
+        <input type="text" id="nombreAdmin" placeholder="NameAdmin">
+        <input type="email" id="correoAdmin" placeholder="emailAdmin">
+        <input type="password" id="passwordAdmin" placeholder="PasswordAdmin">
+
+        <button onclick="traerInformacionAdministrador">Consultar</button>
+        <button onclick="guardarInformacionAdministrador">Insertar</button>
+        <button onclick="modificarInformacionAdministrador">Modificar</button>
+        <button onabort="borrarInformacionAdministrador">Borrar</button> 
+
+    </div>
+
+    <div id="resultado">
+
+    </div>
+
+
+
+</body>
+<script type="text/javascript" src="js/funciones.js"></script>
+</html>
