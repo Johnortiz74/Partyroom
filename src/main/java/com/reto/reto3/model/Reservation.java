@@ -29,7 +29,7 @@ public class Reservation {
     @ManyToOne
     @JoinColumn(name = "idReserv")
     @JsonIgnoreProperties("reservations")
-    private Partyroom partyroom;
+    private Partyroom partyrooms;
 
     //muchas reservation a cliente 5
     @ManyToOne
