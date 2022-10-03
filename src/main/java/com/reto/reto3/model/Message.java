@@ -53,11 +53,11 @@ public class Message {
     }
 
     public Partyroom getPartyroom() {
-        return partyroom;
+        return partyrooms;
     }
 
     public void setPartyroom(Partyroom partyroom) {
-        this.partyroom = partyroom;
+        this.partyrooms = partyroom;
     }
 
     public Client getClient() {
