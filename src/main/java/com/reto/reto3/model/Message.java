@@ -25,7 +25,7 @@ public class Message {
     @ManyToOne
     @JoinColumn(name = "partyroom")
     @JsonIgnoreProperties({"messages","client","reservations"})
-    private Partyroom partyrooms;
+    private Partyroom partyroom;
 
     //muchos mensajes a un cliente4
     @ManyToOne
@@ -49,12 +49,12 @@ public class Message {
         this.messageText = messageText;
     }
 
-    public Partyroom getPartyrooms() {
-        return partyrooms;
+    public Partyroom getPartyroom() {
+        return partyroom;
     }
 
-    public void setPartyrooms(Partyroom partyrooms) {
-        this.partyrooms = partyrooms;
+    public void setPartyroom(Partyroom partyroom) {
+        this.partyroom = partyroom;
     }
 
     public Client getClient() {
@@ -65,6 +65,5 @@ public class Message {
         this.client = client;
     }
 
-   
     
 }
