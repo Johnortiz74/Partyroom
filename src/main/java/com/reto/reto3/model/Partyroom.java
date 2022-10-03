@@ -37,13 +37,13 @@ public class Partyroom {
     private Category category;
     
     //un partyroom tiene muchos mensajes 2
-    @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "partyroom")
+    @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "partyrooms")
     //@JsonIgnoreProperties("partyroom")
     @JsonIgnoreProperties({"partyrooms","client"})
     private List<Message> messages;
     
     //un partyroom tiene muchas reservaciones3
-    @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "partyroom")
+    @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "partyrooms")
     @JsonIgnoreProperties("partyrooms")
     private List<Reservation> reservations;
 
