@@ -112,7 +112,4 @@ public class Partyroom {
     }
 
     
-    
-    //getter ans setter
-   
 }

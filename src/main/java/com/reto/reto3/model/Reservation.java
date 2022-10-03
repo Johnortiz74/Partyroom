@@ -37,17 +37,6 @@ public class Reservation {
     @JsonIgnoreProperties({"reservations","messages"})
     private Client client;
 
-    
-    
-    
-    public String getScore() {
-        return score;
-    }
-
-    public void setScore(String score) {
-        this.score = score;
-    }
-
     public Integer getIdReservation() {
         return idReservation;
     }
@@ -80,12 +69,20 @@ public class Reservation {
         this.status = status;
     }
 
-    public Partyroom getPartyroom() {
+    public String getScore() {
+        return score;
+    }
+
+    public void setScore(String score) {
+        this.score = score;
+    }
+
+    public Partyroom getPartyrooms() {
         return partyrooms;
     }
 
-    public void setPartyroom(Partyroom partyroom) {
-        this.partyrooms = partyroom;
+    public void setPartyrooms(Partyroom partyrooms) {
+        this.partyrooms = partyrooms;
     }
 
     public Client getClient() {
@@ -96,9 +93,9 @@ public class Reservation {
         this.client = client;
     }
 
-
-
     
     
+    
+   
                     
 }

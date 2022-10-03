@@ -33,9 +33,6 @@ public class Message {
     @JsonIgnoreProperties({"messages","reservations","client"})
     private Client client;
 
-    
-    
-    
     public Integer getIdMessage() {
         return idMessage;
     }
@@ -52,12 +49,12 @@ public class Message {
         this.messageText = messageText;
     }
 
-    public Partyroom getPartyroom() {
+    public Partyroom getPartyrooms() {
         return partyrooms;
     }
 
-    public void setPartyroom(Partyroom partyroom) {
-        this.partyrooms = partyroom;
+    public void setPartyrooms(Partyroom partyrooms) {
+        this.partyrooms = partyrooms;
     }
 
     public Client getClient() {
@@ -68,12 +65,8 @@ public class Message {
         this.client = client;
     }
 
-    //category puede tener muuchos message  paso 7
-    //@ManyToOne
-    //@JoinColumn(name = "idMessa")
-    //@JsonIgnoreProperties({"messages"})
-    //private Category category;
     
-
+    
+    
     
 }

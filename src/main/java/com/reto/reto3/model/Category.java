@@ -27,8 +27,6 @@ public class Category {
     @JsonIgnoreProperties("category")
     private List<Partyroom> partyrooms;
 
-    
-    
     public Integer getId() {
         return id;
     }
@@ -53,23 +51,14 @@ public class Category {
         this.description = description;
     }
 
-    public List<Partyroom> getPartyroom() {
+    public List<Partyroom> getPartyrooms() {
         return partyrooms;
     }
 
-    public void setPartyroom(List<Partyroom> partyroom) {
-        this.partyrooms = partyroom;
+    public void setPartyrooms(List<Partyroom> partyrooms) {
+        this.partyrooms = partyrooms;
     }
 
-    // una category a muchas reservation6
-    //@OneToMany(mappedBy = "category")
-    //@JsonIgnoreProperties("category")
-    //private List<Reservation> reservations;
-    //ejemplo
-    //una category a muchosmmensaje7
-    //@OneToMany(mappedBy = "category")
-    //@JsonIgnoreProperties("category")
-    //private List<Message> messages;
-
+   
     
 }
