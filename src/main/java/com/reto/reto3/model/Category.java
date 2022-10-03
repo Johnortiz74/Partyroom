@@ -25,7 +25,7 @@ public class Category {
     //Una categoria a muchos partyroom 1
     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "category")
     @JsonIgnoreProperties("category")
-    private List<Partyroom> partyroom;
+    private List<Partyroom> partyrooms;
 
     
     
@@ -54,11 +54,11 @@ public class Category {
     }
 
     public List<Partyroom> getPartyroom() {
-        return partyroom;
+        return partyrooms;
     }
 
     public void setPartyroom(List<Partyroom> partyroom) {
-        this.partyroom = partyroom;
+        this.partyrooms = partyroom;
     }
 
     // una category a muchas reservation6

@@ -33,7 +33,7 @@ public class Partyroom {
     //muchos partyroon a una categoria 1
     @ManyToOne
     @JoinColumn(name = "categoryId")
-    @JsonIgnoreProperties("partyroom")
+    @JsonIgnoreProperties("partyrooms")
     private Category category;
     
     //un partyroom tiene muchos mensajes 2
