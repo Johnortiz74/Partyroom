@@ -25,7 +25,7 @@ public class Message {
     @ManyToOne
     @JoinColumn(name = "partyroom")
     @JsonIgnoreProperties({"messages","client","reservations"})
-    private Partyroom partyroom;
+    private Partyroom partyrooms;
 
     //muchos mensajes a un cliente4
     @ManyToOne
