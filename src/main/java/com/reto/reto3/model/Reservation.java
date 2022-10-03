@@ -24,7 +24,7 @@ public class Reservation {
     private Date devolutionDate;
     private String status="created";
 
-    private String score;
+    
     
     //muchas reservation a un partyroom3
     @ManyToOne
@@ -37,6 +37,9 @@ public class Reservation {
     @JoinColumn(name = "idReser")
     @JsonIgnoreProperties({"reservations","messages"})
     private Client client;
+
+
+    private String score;
 
     public Integer getIdReservation() {
         return idReservation;
