@@ -65,8 +65,6 @@ public class Message {
         this.client = client;
     }
 
-    
-    
-    
+   
     
 }

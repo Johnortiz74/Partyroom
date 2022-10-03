@@ -37,14 +37,14 @@ public class Partyroom {
     private Category category;
     
     //un partyroom tiene muchos mensajes 2
-    @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "partyrooms")
+    @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "partyroom")
     //@JsonIgnoreProperties("partyroom")
-    @JsonIgnoreProperties({"partyrooms","client"})
+    @JsonIgnoreProperties({"partyroom","client"})
     private List<Message> messages;
     
     //un partyroom tiene muchas reservaciones3
-    @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "partyrooms")
-    @JsonIgnoreProperties("partyrooms")
+    @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "partyroom")
+    @JsonIgnoreProperties("partyroom")
     private List<Reservation> reservations;
 
     public Integer getId() {
@@ -111,5 +111,6 @@ public class Partyroom {
         this.reservations = reservations;
     }
 
+   
     
 }

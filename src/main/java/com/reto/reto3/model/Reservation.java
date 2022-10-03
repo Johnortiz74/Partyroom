@@ -29,7 +29,7 @@ public class Reservation {
     @ManyToOne
     @JoinColumn(name = "idReserv")
     @JsonIgnoreProperties("reservations")
-    private Partyroom partyrooms;
+    private Partyroom partyroom;
 
     //muchas reservation a cliente 5
     @ManyToOne
@@ -77,12 +77,12 @@ public class Reservation {
         this.score = score;
     }
 
-    public Partyroom getPartyrooms() {
-        return partyrooms;
+    public Partyroom getPartyroom() {
+        return partyroom;
     }
 
-    public void setPartyrooms(Partyroom partyrooms) {
-        this.partyrooms = partyrooms;
+    public void setPartyroom(Partyroom partyroom) {
+        this.partyroom = partyroom;
     }
 
     public Client getClient() {
@@ -93,8 +93,6 @@ public class Reservation {
         this.client = client;
     }
 
-    
-    
     
    
                     

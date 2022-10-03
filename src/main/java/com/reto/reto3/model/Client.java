@@ -107,9 +107,7 @@ public class Client {
         this.reservations = reservations;
     }
 
-    
-    
-    //setter and getter
+
     
         
 }
