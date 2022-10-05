@@ -44,11 +44,12 @@ public class CategoryService {
         if (category.getId() != null) {
             Optional<Category> e = categoryRepository.obtenerCategoryId(category.getId());
             if (!e.isEmpty()) {
-                if (category.getDescription() != null) {
-                    e.get().setDescription(category.getDescription());
-                }
+                
                 if (category.getName() != null) {
                     e.get().setName(category.getName());
+                }
+                if (category.getDescription() != null) {
+                    e.get().setDescription(category.getDescription());
                 }
                 categoryRepository.salvarCategory(e.get());
                 return e.get();
