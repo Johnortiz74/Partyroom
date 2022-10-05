@@ -26,5 +26,10 @@ public class ClientRepository {
     public Optional<Client> obtenerClientId(Integer id) {
         return clientCrudRepoInterfaz.findById(id);
     }
+
+    public void delete(Client client) {
+        clientCrudRepoInterfaz.delete(client);
+        
+    }
     
 }

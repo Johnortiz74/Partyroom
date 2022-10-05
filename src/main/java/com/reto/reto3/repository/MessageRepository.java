@@ -27,5 +27,10 @@ public class MessageRepository {
 
     }
 
+    public void delete(Message message) {
+        messageCrudRepoInterfaz.delete(message);
+        
+    }
+
 
 }

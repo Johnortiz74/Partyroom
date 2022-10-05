@@ -28,5 +28,10 @@ public class PartyroomRepository {
         return partyroomCrudRepoInterfaz.save(partyroom);
     }
 
+    public void delete(Partyroom partyroom) {
+        partyroomCrudRepoInterfaz.delete(partyroom);
+        
+    }
+
 
 }

@@ -27,5 +27,17 @@ public class CategoryRepository {
         return categoryCrudRepoInterfaz.save(category);
     }
 
+    public void delete(Category category) {
+        categoryCrudRepoInterfaz.delete(category);
+        
+    }
+  
 
+
+    //public Optional<Category> getCategory(int id){
+      //  return categoryCrudRepositoryInterfaz.findById(id);
+    //}
+
+   
 }
+ 
