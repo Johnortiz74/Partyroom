@@ -33,7 +33,7 @@ public class CategoryController {
         return categoryService.obtenerCategoryCompleta();
     }
     @GetMapping("/{id}")
-    public Optional<Category> obtenerCategoryId(@PathVariable("id") Integer identificador){
+    public Optional<Category> obtenerCategoryId(@PathVariable("id") int identificador){
         return categoryService.obtenerCategoryId(identificador);    
     }
 
