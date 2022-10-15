@@ -8,13 +8,219 @@
     <script   src="https://code.jquery.com/jquery-3.6.1.js"   integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="   crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/funciones.js"></script>
+    <script type="text/javascript" src="js/category.js"></script>
+    <script type="text/javascript" src="js/client.js"></script>
+    <script type="text/javascript" src="js/message.js"></script>
+    <script type="text/javascript" src="js/partyroom.js"></script>
+    <script type="text/javascript" src="js/reservation.js"></script>
     
     <title>FrontEnd Partyroom</title>
 </head>
 
 <body>
     
+<div class="container">
+
+    <div>
+        <table class="table table-bordered">    
+            <thead>
+                <tr>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripcion</th>
+                </tr>
+            </thead>
+            <tbody id="resultado"></tbody>
+        
+        </table>
+    </div>
+    
+    <div class="container mt-5 mb-5">
+        <h1 class="text-center text-success">Alquiler de Salones</h1>
+        <h3>Category</h3>
+        
+        <div>
+            <div class="mb-3">
+                <label>Id</label>
+                <input type="number"  id="idCategoria" placeholder="Id Category" disabled>
+            </div>
+    
+            <div class="mb-3">
+                <label>Name Category</labelclass>
+                <input class="ml-15" type="text" id="nombreCategoria" placeholder="Insert name category" required>
+            </div>
+            <div class="mb-3">
+                <label>Description Category</label>
+                <input type="text" id="descripcionCategoria" placeholder="Insert description category" required>
+            </div>
+        </div>
+            
+        <div>
+            <button onclick="traerInformacionCategoria()">Consultar</button>
+            <button onclick="guardarInformacionCategoria()">Insertar</button>
+            <button onclick="modificarInformacionCategoria()">Modificar</button>
+            <button onclick="consultarIdc()">ConsultarId</button> 
+        
+        </div>
+            
+    </div>
+         
+          
+    
+</div>       
+    
+
+
+
+<div class="container">
+        <h1>Partyroom</h1>
+        <div>
+            <div><input type="number" id="idPartyroom" placeholder="Id Partyroom"></div>
+            <div><input type="text"   id="nombrePartyroom" placeholder="Name Partyroom"></div>
+            <div><input type="text"   id="duenoPartyroom" placeholder="Owner Partyroom"></div>
+            <div><input type="number" id="capacidadPartyroom" placeholder="Capacity Partyroom"></div>
+            <div><input type="text"   id="descripcionPartyroom" placeholder="Description Partyroom"></div>
+            <div><input type="number" id="idCategoriaP" placeholder="Id Category"></div>
+        </div>
+        <div>
+            <button onclick="traerInformacionPartyroom()">Consultar</button>
+            <button onclick="guardarInformacionPartyroom()">Insertar</button>
+            <button onclick="modificarInformacionPartyroom()">Modificar</button>
+            <button onclick="consultarId()">ConsultarId</button> 
+        </div>
+
+        <div>
+            <table class="table table-bordered">    
+                <thead>
+                    <tr>
+                        <th scope="col">Codigo</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Dueño</th>
+                        <th scope="col">Capacidad</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Codigo Categoria</th>
+                        <th scope="col">Nombre Categoria</th>
+                        <th scope="col">Descripcion Categoria</th>
+                        <th scope="col">Mensaje</th>
+                        <th scope="col">Reservaciones</th>
+                    </tr>
+                </thead>
+                <tbody id="resultado"></tbody>
+            
+            </table>
+        </div>
+
+</div>
+
+     
+   
+<div class="container">
+    <h1>Cliente</h1>
+        <div>
+            <input type="text"   id="nombreCliente" placeholder="Name Client">
+            <input type="email"   id="emailCliente" placeholder="emailClient">
+            <input type="password"   id="claveCliente" placeholder="PasswordClient">
+            <input type="number" id="edadCliente" placeholder="AgeCliente">
+        </div>
+        <div>
+            <button onclick="traerInformacionCliente()">Consultar</button>
+            <button onclick="guardarInformacionCliente()">Insertar</button>
+            <button onclick="modificarInformacionCliente()">Modificar</button>
+            <button onabort="borrarInformacionCliente()">Borrar</button> 
+        </div>
+
+        <div>
+            <table class="table table-bordered">    
+                <thead>
+                    <tr>
+                        <th scope="col">Codigo</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Edad</th>
+                        <th scope="col">Mensaje</th>
+                        <th scope="col">Reservaciones</th>
+                    </tr>
+                </thead>
+                <tbody id="resultado"></tbody>
+            
+            </table>
+        </div>    
+</div>
+
+    
+<div class="container">
+        <h1>Mensajes</h1>
+        <div>
+            <input type="text" id="mensageCliente" placeholder="MessageClient">
+            <input type="number" id="idClienteM" placeholder="Codigo Cliente">
+            <input type="number" id="idPartyroomM" placeholder="Codigo Partyroom">
+        </div>
+        <div>
+            <button onclick="traerInformacionMensaje()">Consultar</button>
+            <button onclick="guardarInformacionMensaje()">Insertar</button>
+            <button onclick="modificarInformacionMensaje()">Modificar</button>
+            <button onabort="borrarInformacionMensaje()">Borrar</button> 
+        </div>
+
+        <div>
+            <table class="table table-bordered">    
+                <thead>
+                    <tr>
+                        <th scope="col">Codigo</th>
+                        <th scope="col">Mensaje</th>
+                        <th scope="col">Codigo Bicicleta</th>
+                        <th scope="col">Nombre Bicicleta</th>
+                        <th scope="col">Codigo Cliente</th>
+                        <th scope="col">Nombre Cliente</th>
+                    </tr>
+                </thead>
+                <tbody id="resultado"></tbody>
+            
+            </table>
+        </div>
+</div>
+
+    
+<div class="container">
+        
+    <h1>Reservaciones</h1>
+        <div>
+            <input type="date" id="fechaInicio" placeholder="StartDate">
+            <input type="date" id="fechaFinal" placeholder="DevolutionDate">
+            <input type="number" id="idClienteR" placeholder="Codigo Cliente">
+            <input type="number" id="idPartyroomR" placeholder="Codigo Partyroom">
+        </div>
+        <div>
+            <button onclick="traerInformacionReservacion()">Consultar</button>
+            <button onclick="guardarInformacionReservacion()">Insertar</button>
+            <button onclick="modificarInformacionReservacion()">Modificar</button>
+            <button onabort="borrarInformacionReservacion()">Borrar</button> 
+        </div>
+
+        <div>
+            <table class="table table-bordered">    
+                <thead>
+                    <tr>
+                        <th scope="col">Codigo Reservacion</th>
+                        <th scope="col">Fecha Inicio</th>
+                        <th scope="col">Fecha Final</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Codigo Partyroom</th>
+                        <th scope="col">Nombre Partyroom</th>
+                        <th scope="col">Codigo Cliente</th>
+                        <th scope="col">Nombre Cliente</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="resultado"></tbody>
+            
+            </table>
+        </div>
+</div>
+
+    
+
 </body>
 
 
