@@ -54,9 +54,16 @@ function guardarInformacionCategoria() {
       $("#descripcionCategoria").val("");
       traerInformacionCategoria();
       alert("Se guardo exitosamente");
+      
     },
     error: function (xhr, status) {
-      alert("No se guardo datos," + xhr.status);
+      //alert("Ingrese todos los datos," + xhr.status);
+      if($("#nombreCategoria").val()){
+        alert("ingrese el descripcion")
+
+      }else{
+        alert("Ingrese nombre")
+      }
     },
   });
 }
@@ -80,7 +87,9 @@ function modificarInformacionCategoria() {
       $("#idCategoria").val("");
       $("#nombreCategoria").val("");
       $("#descripcionCategoria").val("");
+      
       traerInformacionCategoria();
+      
       alert("Actualizacion exitosa");
     },
     error: function (xhr, status) {

@@ -40,7 +40,7 @@ function pintarRespuestaCliente(items) {
 }
 
 function guardarInformacionCliente() {
-    //$("#resultado").empty();
+    $("#resultado").empty();
 
     let myData = {
         name: $("#nombreCliente").val(),
@@ -59,16 +59,19 @@ function guardarInformacionCliente() {
         contentType: "application/json",
         success: function (respuesta) {
             $("#resultadoCliente").empty();
-
             traerInformacionCliente();
             $("#nombreCliente").val("");
             $("#emailCliente").val("");
             $("#claveCliente").val("");
             $("#edadCliente").val("");
             alert("Se guardo exitosamente el cliente");
+           
         },
         error: function (xhr, status) {
-            alert("Operacion no satisfactoria," + xhr.status);
+            if ($("#nombreCliente").val("") || $("#emailCliente").val("") || $("#claveCliente").val("")|| $("#edadCliente").val("")) {
+                alert("Digite todos los campos")
+            }
+            //alert("Operacion no satisfactoria," + xhr.status);
         },
     });
 }

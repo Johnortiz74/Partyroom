@@ -3,6 +3,8 @@ package com.reto.reto3.controller;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -43,7 +45,7 @@ public class ClientController {
 
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
-    public Client salvarClient(@RequestBody Client client){
+    public Client salvarClient(@Valid @RequestBody Client client){
         return clientService.salvarClient(client);
 
     }

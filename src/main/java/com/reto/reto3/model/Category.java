@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -19,7 +20,13 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    
+    
+    @NotBlank (message = "nombre es requerido")
     private String name;
+    
+    
+    @NotBlank (message = "descripcion es requerida")
     private String description;
     
     //Una categoria a muchos partyroom 1
@@ -58,6 +65,8 @@ public class Category {
     public void setPartyrooms(List<Partyroom> partyrooms) {
         this.partyrooms = partyrooms;
     }
+
+    
 
    
     

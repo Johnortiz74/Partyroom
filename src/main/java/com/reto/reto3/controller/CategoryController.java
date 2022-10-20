@@ -3,6 +3,8 @@ package com.reto.reto3.controller;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -40,7 +42,7 @@ public class CategoryController {
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
 
-    public Category salvarCategory(@RequestBody Category category){
+    public Category salvarCategory(@RequestBody @Valid Category category){
         return categoryService.salvarCategory(category);
 
     }

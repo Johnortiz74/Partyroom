@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -21,9 +23,18 @@ public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idClient;
+
+    @NotBlank
+    @Email
     private String email;
+    
+    @NotBlank (message = "Ingrese password")
     private String password;
+
+    @NotBlank (message = "Ingrese name")
     private String name;
+
+    //@NotBlank (message = "Ingrese años ")
     private Integer age;
 
     //un cliente tiene muchos mensajes4
@@ -48,16 +59,6 @@ public class Client {
     }
 
 
-    public String getName() {
-        return name;
-    }
-
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-
     public String getEmail() {
         return email;
     }
@@ -75,6 +76,16 @@ public class Client {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+
+    public void setName(String name) {
+        this.name = name;
     }
 
 
